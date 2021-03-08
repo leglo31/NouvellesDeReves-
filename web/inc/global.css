@@ -1,0 +1,703 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21 avr. 2020, 16:42:45
+    Author     : Glotin Laurent
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+/*
+font-family: 'Advent Pro', sans-serif;
+font-family: 'Dancing Script', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+
+*{margin:0; padding: 0; box-sizing: border-box;}
+/* aucune marge sur tous les éléments, et éléments avec les marges sont calculés directement*/
+
+/* Taille normale des titres sur un ordinateur */
+/*
+h1 {
+font-size: 5em;
+}
+*/
+/* Si on utilise un petit écran (que ce soit avec un ordinateur dans une petite fenêtre ou avec un smartphone), les titres sont réduits */
+
+
+@media screen and (max-width: 6000px) {/*grand écran*/
+    h1{font-size: 3em;}
+    p, h3,#headerdisposition a{font-size: 1.4em;color: black;} 
+    #script,#ulinscription a,.tousaside a, label,footer li,form input{font-size: 1.1em;color: black;}
+    footer a{font-size: 1.2em;color: red;}
+    h5{font-size: 1em;}
+    .spanouvelle{font-size: 0.8em;}
+    h4{font-size: 2.2em;}
+}
+
+
+@media screen and (max-width: 1800px) {/*écran pc normal 17' entre 1300 et 1800px*/
+    h1{font-size:2.6em; color: blue;}
+    p,h3,#headerdisposition a{font-size: 1.2em; color: blue;}
+    #script,#ulinscription a,.tousaside a, label,footer li,form input{font-size: 1em; color: blue;}
+    footer a{color: black;}
+    h5{font-size: 0.9em;}
+    .spanouvelle{font-size: 0.65em; color: blue;}
+    h4{font-size: 1.8em; color: blue;} 
+}
+
+
+@media screen and (max-width: 1300px) {/*écran hp ancien entre 900 et 1300px*/
+    h1{font-size: 2.3em;color: darkslateblue;}
+    p,h3,#headerdisposition a{font-size: 1em; color: darkslateblue;} 
+    #script,#ulinscription a,.tousaside a, label, footer li,form input{font-size: 0.85em; color: darkslateblue;}
+    footer a{color: black;}
+    h5{font-size: 0.75em;}
+    .spanouvelle{font-size: 0.6em;color: darkslateblue;}
+    h4{font-size: 1.6em;color: darkslateblue;}
+}
+
+
+@media screen and (max-width: 900px) {/*tablette entre 350 et 900*/
+    h1{font-size:2em; color: violet}
+    p,h3,#headerdisposition a{ font-size: 0.8em;color: violet; }
+    #script,#ulinscription a,.tousaside a,label, footer li,form input{font-size: 0.65em; color: violet;}
+    footer a{color: darkslateblue;}
+    h5{font-size: 0.60em;}
+    .spanouvelle{font-size: 0.5em;color: violet;}
+    h4{font-size: 1.4em;color: violet;}
+
+}
+
+@media screen and (max-width: 350px) {/*portable*/
+    h1{font-size:1.8em;color: orange;}
+    p,h3,#headerdisposition a{font-size: 0.6em;color: orange;}
+    #script,#ulinscription a,.tousaside a, label,footer li,form input{font-size: 0.5em; color: orange;}
+    footer a{color: violet;}
+    h5{font-size: 0.5em;}
+    .spanouvelle{font-size: 0.4em;color: orange;}
+    h4{font-size: 1.1em;color: orange;}
+}
+
+
+@font-face {
+    font-family: 'Aileron-Bold';
+    src: url('inc/Aileron-Bold.otf') format('truetype');
+}
+
+
+html{
+    background-color:darkslategray;
+
+}
+body {
+    /*    font-family:'Aileron-Regular';*/
+    font-family: 'Advent Pro', sans-serif; 
+    height:auto;/*prend automatiquement la hauteur du contenu*/
+    background-color:floralwhite;
+    margin: 5px 10px 5px 10px;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 20px;
+
+}
+
+/**************************************************************************/
+/*HEADER*/
+/**************************************************************************/
+#headerdisposition{
+    background: url(moon.jpg) ;
+    height: 35vh;/*viewport height=>basé sur la hauteur de la fénêtre, ici 35%*/ 
+    background-position: center;/*se positionne pour voir l'image au centre */ 
+    background-size: cover;/*l'image remplit tout l'espace en conservant hauteur/largeur*/ 
+    display: flex;/* les blocs se placent par défaut côte à côte à l'horizontal*/  
+    flex-direction: column;/* les blocs se placent par colonne les uns sous les autres*/ 
+    justify-content: space-between;
+    border-top-left-radius:  20px;
+    border-top-right-radius:  20px;
+}
+
+
+/****TITRE****/
+#headerdisposition h1{
+    animation-name:  monanimation;/*l'animation est appelé ici*/ 
+    animation-duration: 10s;
+    margin-right: 50px;
+    margin-top: 10px;/*h1 marge en haut*/ 
+    font-family: 'Lovers Quarrel', cursive;  
+    text-align: right;/*h1 aligné à droite*/ 
+    /*    color: darkslateblue;*/
+    /*    font-size: 2.5em;h1 taille police */
+    overflow: hidden;/*s'efface quand il n'y a plus de place*/
+    font-weight: 600;/*font avec valeur numérique correspondant à un bold léger plus*/
+}
+
+@keyframes monanimation{/*construction de l'animation pour le h1*/ 
+    40%{transform: skew(22deg, 13deg);}/*h1 descend et tourne, 1ier chiffre vitesse*/ 
+}
+
+
+/****BARRE DE NAVIGATION****/
+nav{
+    overflow: hidden;/*s'efface quand il n'y a plus de place*/
+    background-color:antiquewhite;
+    opacity: 0.8;
+}
+
+#headerdisposition ul{  
+    display: flex;/* les blocs se placent par défaut côte à côte à l'horizontal*/  
+    justify-content: space-around;/*écart des li + espace coté exterieur*/
+}
+
+#headerdisposition li{
+    /* margin: 5px;marge li en hauteur par rapport image*/
+    flex-grow: 1; /*les li prennent toute la place en horizontal*/
+    list-style-type: none;/*enlève les points sur les li*/ 
+
+}
+
+#headerdisposition li a{
+    text-decoration: none;
+    display: block;/*elles prennent toute la largeur disponible */
+    text-align: center;/*aligne texte au centre des li*/
+    /*    color: darkslateblue;*/
+    padding: 5px; /*espace en haut et en bas*/
+    /*    font-size: 1.1em; em  taille qui s'adapte à l'écran*/
+    font-weight: bold;
+}
+
+#headerdisposition  li:hover{
+    background-color: #D2B48C;/* changement couleur lorsque l'on passe sur <li>*/
+    transform: scale(1.05); /*survole avec le pointeur grossissement*/
+}
+
+#headerdisposition  li :active {/*lorsque l'on clic sur <a> alors changement de couleur*/
+    background-color: #CD853F;
+}
+
+#headerdisposition a{    
+    /*  font-size: 1.3em;  */
+}
+
+#logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+
+/**************************************************************************/
+/*INSCRIPTION*/
+/**************************************************************************/
+.barreinscription{
+    padding: 2px;
+    display: flex;
+    align-content: center;
+    justify-content:space-between;
+    flex-wrap: wrap; /*met à la ligne les éléments si écran reduit*/
+}
+
+#script{
+    margin: 5px; 
+    /*    font-size: 0.9em;*/
+    /*    color:darkgreen;*/
+    font-weight: bold;  
+    overflow: hidden;
+}
+
+
+#ulinscription{
+    list-style-type: none;/*enlève les points sur les li*/ 
+    display: flex;
+    overflow: hidden;
+}
+
+#ulinscription li a{
+    display: flex;
+    margin: 5px;   
+    font-weight: bold;
+    text-decoration: none;
+    /*    color: darkslateblue;*/
+}
+
+#ulinscription  li:hover{
+    transform: scale(1.05);
+}
+
+
+/**************************************************************************/
+/*CENTRE*/
+/**************************************************************************/
+.centre{
+    display: flex;
+    /*margin-left: 5px;*/
+    margin-right: 5px;
+    background-position: center;/*quand on reduit la fenêtre, elle se reduit de tous les cotés*/ 
+    background-size: cover;
+    overflow: hidden;/*s'efface quand il n'y a plus de place*/
+}
+
+main{
+    flex:6;/*dimension largeur du main dans le centre par rapport au tousaside 6 pour 1*/
+    overflow: hidden;/*s'efface quand il n'y a plus de place*/
+}
+
+.tousaside{
+    flex:1;/*dimension largeur du tousaside dans le centre par rapport au main 1/6*/
+    overflow: hidden;/*s'efface quand il n'y a plus de place*/
+}
+
+/****CONTENU NOUVELLE****/
+article{
+    display: flex;
+    flex-direction: column;/*met tout le contenu dans les article en mode colonne, les uns au dessus des autres*/ 
+    margin-left: 5px;/*marge entre les article*/ 
+    /*border-left: 1px solid #DCDCDC;*/
+    font-family:'Aileron-Bold';
+}
+
+/*.article:nth-child(3){
+    border-bottom: 1px solid #DCDCDC; trait sous le dernier article 
+}*/
+
+article div{
+    padding: 4.1px;/*hauteur des titres h5 qui sont en gray afin d'être aussi haut que ceux des asides */ 
+    color: white;  
+    background-color: gray;
+}
+
+article h5,h4{
+    margin-left: 5px;/*marge gauche des h5 et h4 ->titre en fond gris+Nouvelles de rêves*/ 
+}
+
+article h3{
+    /*        border: 1px solid #DCDCDC; cadre pour essai*/
+    padding: 3px; /*hauteur des h3 ->nouvelles*/ 
+    margin: 0px 5px 0px 5px;
+    font-family:'Aileron-Bold';
+    /*    font-weight:normal;enlève le bold mis par défaut */
+
+}
+#h3dixnouvelles:nth-child(even) {
+    background-color:#FAF0E6;/*change de couleur une fois sur deux(paire->even)*/ 
+}
+#h3dixnouvelles{
+    margin-bottom: 2px;/*marge bas des li car ils sont sur la boucle foreach*/ 
+}
+
+#h3lastnews{
+    background-color:#FAF0E6;
+    margin-top: 5px;
+    margin-bottom: 5px;/*marge haut et bas du h3 de la dernière nouvelle...
+                       obligé de faire ainsi à cause du foreach sur les nouvelles et qui ont aussi un h3 */ 
+}
+
+#h5dixnouvelles{
+    margin-bottom: 5px;/*marge bas du h3->10 dernières nouvelles*/ 
+}
+
+p{
+    font-family:'Aileron-Bold';
+    margin-bottom: 12px;
+}
+
+article h4{
+    padding: 10px 0px 10px 0px;
+    font-family: 'Lovers Quarrel', cursive; 
+
+}
+#img{
+    background-image: url(unders.png);
+    background-repeat:no-repeat;
+    background-position: top;/* se positionne en haut et au centre  */
+}
+
+
+#section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+section{
+    flex-grow: 1;
+}
+
+section:nth-child(1){
+ border-right: 1px solid #DCDCDC;
+}
+
+/*.spandate{
+    font-size: 0.8em;
+    color: grey;
+     font-family:'Aileron-Bold';
+}*/
+
+
+/****BARRE DE GAUCHE ASIDE****/
+
+/****FORMULAIRE****/
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0px 5px 0px 5px;
+}
+
+form input {
+    margin-left: 5px;
+    border: 1px gray solid;
+    border-radius: 2px;
+    width: 80%;
+    padding:0.3em;
+ 
+}
+
+.boutonConnexion {
+    text-decoration:none; 
+    border: 1px solid gray;
+    padding-top:0.1em;/*utilisation des em car il y a une police, et cela doit respecter les proportions*/
+    padding-bottom: 0.1em;
+    text-align:center;
+    margin:5px 0px 0px 5px;
+    width: 5em;/*largeur du bouton ok exprimé en em car il y a une police*/
+    background-color: #DCDCDC;
+    border-radius: 2px;
+}
+
+.boutonOk {
+    text-decoration:none; 
+    border: 1px solid gray;
+    padding-top:0.1em;
+    padding-bottom: 0.1em;
+    text-align:center;
+    margin:0.3em 0em 0.3em .5em;
+    width: 1.5em;/*largeur du bouton ok exprimé en em car il y a une police*/
+    background-color: #DCDCDC;
+    border-radius: 2px;
+}
+
+/*Triangles blanc et gray*/
+.triangletitre, .triangleliste {
+    width: 0;
+    height: 0; 
+    overflow: hidden;
+    margin-left: 1px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent; 
+}
+.triangletitre{
+    border-left: 5px solid white;
+}
+.triangleliste {
+    border-left: 5px solid gray;
+}
+
+#h5inside{/*utilisation d'une classe car il y a déjà une classe sur la div*/
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    margin: 6px 0px 6px 0px;
+}
+
+#h5inside:nth-child(1){
+    margin-top: 0px;
+}
+
+.tousaside h5{
+    margin-left: 7px;
+    color: white;
+    font-family:'Aileron-Bold';
+}
+
+.tousaside{    
+    /* margin-right: 5px; */
+    border-right: 1px solid #DCDCDC;
+    display: flex;
+    flex-direction: column; 
+}
+
+aside{
+    margin-bottom:5px;/*marge entre les insides en bas*/
+}
+
+.tousaside ul{
+    list-style-type: none;/*enlève les points sur les li*/ 
+}
+
+.tousaside li a {
+    text-decoration: none;  
+}
+
+.tousaside li{
+    display: flex;
+    align-items: center;
+    padding: 1.5px;
+    margin-left: 3px; 
+}
+
+aside a {
+    margin-left: 7px;
+}
+
+#image{
+    margin: 45px;
+}
+
+/**************************************************************************/
+/*FOOTER*/
+/**************************************************************************/
+
+footer{
+    border-top: 1px solid #DCDCDC;
+    font-weight: 500;
+}
+footer a{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#copyright{
+    background-size: cover;
+    overflow: hidden; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*wrap met à la ligne les li losqu'il n'y a plus de place horizontale*/
+    list-style-type: none;/*enlève les points sur les li*/    
+    margin: 10px;
+    align-items:center; /* aligne les li */
+}
+
+#reseau{
+    list-style-type: none;/*enlève les points sur les li*/   
+    display: flex;
+    align-items:center;
+    /*wrap met à la ligne les li losqu'il n'y a plus de place horizontale*/
+}
+
+
+/*html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    border: 3px solid #A52A2A;
+}
+
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+
+
+******************** NAVBAR ***********************
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    background-color: #FFFAE1;
+
+}
+
+
+
+li {
+    float: right; aligne les li horizontal
+    font-size: 1em;taille des li
+}
+
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 5px 20px; le premier joue sur la marge du haut, et le deuxième marge de droite(espacement entre les li)
+    text-decoration: none;enlève toutes décorations, et entre autre le surlignage
+}
+
+
+li a:hover {
+    background-color: #F0FFFF; Change la couleur en bleu clair
+    transform: scale(1.05); survole avec le pointeur grossissement
+}
+
+
+
+
+.active {
+    background-color: #F0FFFF;
+}
+
+#logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    float: left;
+}
+
+ **************** PHOTO PRINCIPALE ******************* 
+#imageHeader {
+    padding-top: 60px;
+    background: url(sanslune.jpg) ;
+    background-size: cover;
+    height: 150px;
+} 
+
+
+h1 {
+    margin-right: 50px;
+    margin-top: 1px;
+    font-family: 'Lovers Quarrel', cursive;  
+    text-align: right;
+    color:black;
+    font-size: 2.5em;
+   
+}
+    
+#p1{
+     animation-name:  monanimation;
+animation-duration: 10s;
+
+  
+}
+
+
+@keyframes monanimation{
+    
+ 50%{transform: translate(30px,0);}
+}
+
+h3 {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 3em;
+    text-shadow: 1px 3px 2px #050201;
+}
+
+#bodyAccueil {
+    background-color: #FFE4C4;
+}
+
+
+
+  CSS de l'affichage des nouvelles dans la page d'accueil 
+
+.nouvelle {
+
+    background-color: lightgrey;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 20px;
+    max-width: 250px;
+    height: 350px;
+    text-align:center;
+}
+
+.nouvelle:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+
+}
+
+a:link, a:visited, a:active {
+    color: black;
+}
+
+  CSS du footer  
+
+footer {
+    background-color: #333333;
+    color: azure;
+    margin-top: 10px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+footer a, footer a:visited {
+    text-decoration: none;
+    color: azure;
+}
+
+  CSS de la page Nouvelle  
+
+#bodyNouvelle {
+    display: flex;
+    flex-direction: column;
+}
+
+#nouvelleEntiere {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    border: 1px solid lightsteelblue;
+
+}
+
+
+
+#commentaires {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid lightsteelblue;
+}
+
+#comm {
+    border: 0.5px solid lightsteelblue;
+    border-radius: 10px 100px / 120px;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+#score {
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid lightsteelblue;
+}
+
+
+
+
+main{
+    display: flex;  
+    min-height: 100vh;
+    flex-direction: row;
+    border: 3px solid #7CFC00;
+}
+
+*/
+
+
+
+

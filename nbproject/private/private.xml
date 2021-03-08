@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>web/inc/global.css</url>
+            <bookmark id="1">
+                <name/>
+                <line>36</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/WEB-INF/header.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/src/java/servlets/Accueil.java</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/WEB-INF/footer.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/src/java/servlets/Nouvelle.java</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/src/java/servlets/AccueilAdmin.java</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/src/java/dao/NouvelleDAO.java</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/WEB-INF/connexion.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/WEB-INF/barrenavconnection.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/accueil.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/inc/global.css</file>
+            <file>file:/C:/Users/asus/Desktop/NetBeansProjects/NouvellesDeReves/web/inc/form.css</file>
+        </group>
+    </open-files>
+</project-private>
