@@ -11,7 +11,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class Commentaire implements Serializable {
 
