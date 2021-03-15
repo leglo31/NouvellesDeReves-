@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class Nouvelle implements Serializable {
 
