@@ -7,7 +7,7 @@ package beans;
 
 /**
  *
- * @author asus
+ * @author Laurent
  */
 public class Profil {
     int idProfil;
