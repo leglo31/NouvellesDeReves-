@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class NouvelleDAO implements DAO<Nouvelle> {
 
