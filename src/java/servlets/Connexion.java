@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 @WebServlet(name = "Connexion", urlPatterns = {"/connexion"})
 public class Connexion extends HttpServlet {
