@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class ConnexionCheckForm {
 
