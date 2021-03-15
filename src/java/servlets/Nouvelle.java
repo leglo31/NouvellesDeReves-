@@ -25,7 +25,7 @@ import javax.sound.midi.Soundbank;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 @WebServlet("/nouvelle")
 public class Nouvelle extends HttpServlet {
