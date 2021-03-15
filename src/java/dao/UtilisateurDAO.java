@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class UtilisateurDAO implements DAO<Utilisateur> {
 
