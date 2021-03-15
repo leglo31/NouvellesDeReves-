@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author asus
+ * @author Laurent
  */
 @WebServlet(name = "GestionUtilisateurs", urlPatterns = {"/gestionUtilisateurs"})
 public class GestionUtilisateurs extends HttpServlet {
