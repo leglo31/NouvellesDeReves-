@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Quentin Fankrache
+ * @author Laurent
  */
 public class CommentaireDAO implements DAO<Commentaire> {
 
